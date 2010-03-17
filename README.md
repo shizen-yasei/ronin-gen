@@ -59,6 +59,7 @@ Generate a skeleton Extension:
 
 ## Requirements
 
+* [ActiveSupport](http://rubygems.org/gems/activesupport) >= 2.3.5
 * [open-namespace](http://github.com/postmodern/open-namespace) >= 0.1.0
 * [thor](http://github.com/wycats/thor) >= 0.13.0
 * [ronin](http://ronin.rubyforge.org/) >= 0.4.0
