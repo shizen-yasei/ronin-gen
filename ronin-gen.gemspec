@@ -104,24 +104,24 @@ Gem::Specification.new do |s|
     s.specification_version = 3
 
     if Gem::Version.new(Gem::RubyGemsVersion) >= Gem::Version.new('1.2.0') then
+      s.add_runtime_dependency(%q<activesupport>, [">= 3.0.0.beta"])
       s.add_runtime_dependency(%q<open-namespace>, [">= 0.1.0"])
       s.add_runtime_dependency(%q<thor>, [">= 0.13.0"])
-      s.add_runtime_dependency(%q<activesupport>, [">= 2.3.5"])
       s.add_runtime_dependency(%q<ronin>, [">= 0.4.0"])
       s.add_development_dependency(%q<rspec>, [">= 1.3.0"])
       s.add_development_dependency(%q<yard>, [">= 0.5.3"])
     else
+      s.add_dependency(%q<activesupport>, [">= 3.0.0.beta"])
       s.add_dependency(%q<open-namespace>, [">= 0.1.0"])
       s.add_dependency(%q<thor>, [">= 0.13.0"])
-      s.add_dependency(%q<activesupport>, [">= 2.3.5"])
       s.add_dependency(%q<ronin>, [">= 0.4.0"])
       s.add_dependency(%q<rspec>, [">= 1.3.0"])
       s.add_dependency(%q<yard>, [">= 0.5.3"])
     end
   else
+    s.add_dependency(%q<activesupport>, [">= 3.0.0.beta"])
     s.add_dependency(%q<open-namespace>, [">= 0.1.0"])
     s.add_dependency(%q<thor>, [">= 0.13.0"])
-    s.add_dependency(%q<activesupport>, [">= 2.3.5"])
     s.add_dependency(%q<ronin>, [">= 0.4.0"])
     s.add_dependency(%q<rspec>, [">= 1.3.0"])
     s.add_dependency(%q<yard>, [">= 0.5.3"])

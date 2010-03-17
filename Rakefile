@@ -14,7 +14,7 @@ begin
     gem.homepage = 'http://github.com/ronin-ruby/ronin-gen'
     gem.authors = ['Postmodern']
     gem.add_dependency 'open-namespace', '~> 0.1.0'
-    gem.add_dependency 'activesupport', '~> 2.3.5'
+    gem.add_dependency 'activesupport', '~> 3.0.0'
     gem.add_dependency 'thor', '~> 0.13.0'
     gem.add_dependency 'ronin', '~> 0.4.0'
     gem.add_development_dependency 'rspec', '~> 1.3.0'
