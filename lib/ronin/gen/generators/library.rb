@@ -24,6 +24,8 @@ require 'ronin/gen/config'
 require 'ronin/gen/dir_generator'
 require 'ronin/version'
 
+require 'active_support/inflector'
+
 module Ronin
   module Gen
     module Generators
@@ -144,7 +146,7 @@ module Ronin
 
             options[:commands].each do |name|
               @command_file = name.downcase.gsub(/[_-]+/,'_')
-              @command_class = @command_file.to_const_string
+              @command_class = @command_file.camelize
 
               erb File.join('ronin','gen','library','bin','ronin-command.erb'),
                   File.join('bin','ronin-' + @command_file.gsub('_','-'))
@@ -164,7 +166,7 @@ module Ronin
 
             options[:generators].each do |name|
               @generator_file = name.downcase.gsub(/[_-]+/,'_')
-              @generator_class = @generator_file.to_const_string
+              @generator_class = @generator_file.camelize
 
               erb File.join('ronin','gen','library',GENERATORS_DIR,'generator.rb.erb'),
                   File.join(GENERATORS_DIR,"#{@generator_file}.rb")

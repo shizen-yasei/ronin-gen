@@ -21,7 +21,7 @@
 require 'ronin/templates/template'
 
 require 'static_paths/finders'
-require 'extlib'
+require 'active_support/inflector'
 require 'erb'
 require 'thor'
 require 'thor/group'
@@ -98,7 +98,7 @@ module Ronin
 
       def self.inherited(super_class)
         class_name = super_class.name.sub('Ronin::Gen::Generators::','')
-        gen_name = class_name.split('::').join(':').snake_case
+        gen_name = class_name.split('::').join(':').underscore
 
         super_class.namespace(gen_name)
       end
